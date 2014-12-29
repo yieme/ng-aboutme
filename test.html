@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Test App</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular.min.js"></script>
+  <script src="/ng-aboutme.js"></script>
+</head>
+<body ng-app="testApp" ng-controller="testCtrl" style="font-family:arial; padding-top:40px; background-color:#ddd; color:navy"><center>
+  <h2>{{test}}</h2>
+  <p><b>Language:</b><br>{{about.language}}</p>
+  <p><b>Address:</b><br> {{about.city}}, {{about.region}} {{about.country}}</p>
+  <p><b>Geo:</b><br> {{about.latitude}}, {{about.longitude}}</p>
+  <p><b>User Agent:</b><br> {{about.ua}}</p>
+  <script>
+    angular.module('testApp', ['yieme.aboutme'])
+    .controller('testCtrl', ['$scope', '$aboutMe', function($scope, $aboutMe){
+      $scope.test = 'About Me Test';
+      $aboutMe.get().then(function(data) {
+        $scope.about = data;
+      })
+    }]);
+  </script>
+</center></body>
+</html>
