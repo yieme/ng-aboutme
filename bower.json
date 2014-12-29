@@ -1,6 +1,6 @@
 {
   "name": "ng-aboutme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/yieme/ng-aboutme",
   "description": "AngularJS Factory for browser language and geo via service",
   "main": "ng-aboutme.js",
