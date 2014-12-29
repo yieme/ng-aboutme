@@ -4,7 +4,7 @@ angular.module('yieme.aboutme', [])
     get: function(url) {
       var deferred = $q.defer(),
           node     = Math.floor(Math.random() * 2) + 1,
-          url      = url || 'http://ajaxhttpheaders' + node + '.appspot.com';
+          url      = url || 'https://ajaxhttpheaders' + node + '.appspot.com';
 
       $http.jsonp(url + '?callback=JSON_CALLBACK')
       .success(function(data) {
