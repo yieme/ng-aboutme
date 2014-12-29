@@ -10,7 +10,7 @@ AngularJS Factory for browser language and geo via service
 <p>{{about.latitude}}, {{about.longitude}}</p>
 <p>{{about.ua}}</p>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular.min.js"></script>
-<script src="/ng-aboutme.js"></script>
+<script src="/ng-aboutme.min.js"></script>
 <script>
   angular.module('testApp', ['yieme.aboutme'])
   .controller('testCtrl', ['$scope', '$aboutMe', function($scope, $aboutMe){
